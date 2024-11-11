@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --1st-color- : #69573b;
+    --2nd-color- : #3e482a;
+    --3rd-color- : #79804d;
+    --4th-color- : #2d2920;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body{
+    background: url(../pics/dbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffff;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10% 2rem;
+    background: rgba(0, 0, 0, 0.075);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    border-radius: 75px;
+}
+
+.logo{
+    font-size: 3rem;
+    color: var(--1st-color-);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    color: var(--2nd-color-);
+}
+
+.logo span{
+    text-shadow: 0 0 25px var(--3rd-color-);
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: #ffff;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 1s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    columns: var(--2nd-color-);
+    border-bottom: 3px solid var(--main-color);
+    transition: 1s ease;
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+section{
+    min-height: 85vh;
+    padding: 10rem 12% 10rem;
+}
+#contact{
+    background: url(../pics/lbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--bg-color);
+    width: 20px;
+}
+
+@media (max-width:1285px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before{
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even){
+        padding-left: 37px;    
+ }
+    .timeline-dot{
+        left: 0;
+    }
+    .contact form{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .timeline-items::before {
+        left: 10px;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 20px;
+    }
+    .timeline-dot {
+        left: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .timeline-items::before {
+        display: none;
+    }
+    .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .timeline-item {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .timeline-content {
+        padding: 10px;
+    }
+    .timeline-date {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:859px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content .homeTitle{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .about{
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .about-content h3{
+        font-size: 2.6rem;
+    }
+    .about-content h1{
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .about-content p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .about-img img{
+        width: 56vw;
+    }
+    
+}
+
